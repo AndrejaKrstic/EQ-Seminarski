@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate, Navigate, Link } from "react-router-dom";
 import { useEffect } from "react/cjs/react.development";
 
-function MenuBar() {
+function MenuBar({vezbanjeID}) {
   let navigate = useNavigate();
   function handleLogout(e) {
     var config = {
@@ -35,6 +35,8 @@ function MenuBar() {
         <Navigate to={"/login"} />
       ) : (
         <>
+          {vezbanjeID == 1 ? <h3 className="txt-naziv-level">Vežbanje roda</h3>:<></>}
+          {vezbanjeID == 2 ? <h3 className="txt-naziv-level">Vežbanje prevoda</h3>:<></>}
           <span className="circle-home-1"></span>
           <span className="circle-home-2"></span>
           <span className="circle-home-3"></span>

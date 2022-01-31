@@ -28,6 +28,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/words/imenice/{id}', [WordController::class, 'imenice']);
     Route::post('/vezbanje', [PractiseController::class, 'store']);
     Route::post('/users/password', [UserController::class, 'passwordChange']);
+    Route::post('/levels', [PractiseController::class, 'getlevels']);
 
 
 });

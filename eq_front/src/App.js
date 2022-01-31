@@ -34,7 +34,7 @@ function App() {
           path="/izbor-nivoa/1"
           element={
             <>
-              <MenuBar />
+              <MenuBar vezbanjeID={1}/>
               <LevelSelect selektujLevel={selektujLevel} vezbanjeID={1} />
             </>
           }
@@ -43,7 +43,7 @@ function App() {
           path="/izbor-nivoa/2"
           element={
             <>
-              <MenuBar />
+              <MenuBar vezbanjeID={2}/>
               <LevelSelect selektujLevel={selektujLevel} vezbanjeID={2} />
             </>
           }

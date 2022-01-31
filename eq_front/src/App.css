@@ -443,6 +443,8 @@ input:-webkit-autofill:active {
   width: fit-content;
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .div-naziv-vezbanja,
 .div-nivo-vezbanja,
@@ -584,4 +586,14 @@ input:-webkit-autofill:active {
 }
 .txt-progres-nazivi {
   color: #0077b6;
+}
+
+.txt-naziv-level{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20vh;
+  color: #0077b6;
+
+
 }

@@ -105,4 +105,26 @@ class PractiseController extends Controller
     {
         //
     }
+
+    public function getlevels(Request $request){
+        $validator = Validator::make($request->all(),[
+            'naziv_vezbanja'=>'required'
+        ]);
+        $user = Auth::user();
+        $baza = PractiseStorage::where('korisnik_id',$user->id)->get();
+        $ids = $baza->pluck('id_vezbanja');
+        $vezbanja = Practise::whereIn('id',$ids)->where('naziv_vezbanja',$request->naziv_vezbanja)->pluck(
+            'nivo_vezbanja'
+        );
+        return $vezbanja;
+
+    }
+
+
+
+
+
+
+
+
 }
