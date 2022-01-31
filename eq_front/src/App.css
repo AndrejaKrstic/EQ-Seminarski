@@ -1,0 +1,587 @@
+body {
+  height: 100vh;
+  font-family: "Poppins";
+}
+.div-login {
+  height: fit-content;
+  width: 30%;
+  max-width: 400px;
+  min-width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 32px;
+  background-color: #90e0ef;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.input-username-login {
+  border-top-style: hidden;
+  border-left-style: none;
+  border-right-style: none;
+  border-width: 1.5px;
+  background-color: #90e0ef;
+  width: 100%;
+  margin-top: 20px;
+  outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.input-password-login {
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-width: 1.5px;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+}
+.txt-login-error {
+  color: red;
+  font-size: 15px;
+  display: none;
+}
+.btn-login {
+  color: white;
+  background-color: #0077b6;
+  border-radius: 19px;
+  border-style: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.txt-login {
+  font-size: 15px;
+  width: fit-content;
+}
+.link-register {
+  color: #52b69a;
+}
+.circle-login-1 {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  left: -10%;
+  top: -10%;
+  background: #52b69a;
+  filter: blur(200px);
+  z-index: -1;
+}
+.circle-login-2 {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: -20%;
+  background: #d9ed92;
+  filter: blur(100px);
+  z-index: -1;
+}
+.circle-login-3 {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 80%;
+  top: 87%;
+  background: #168aad;
+  filter: blur(100px);
+  z-index: -1;
+}
+.circle-login-4 {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  left: 10%;
+  top: 89%;
+  background: #ffba08;
+  filter: blur(100px);
+  z-index: -1;
+}
+.txt-logo-login {
+  font-size: 70px;
+  color: #0077b6;
+  margin-right: auto;
+  margin-left: auto;
+  width: fit-content;
+  margin-top: 100px;
+}
+.div-register {
+  height: fit-content;
+  width: 30%;
+  max-width: 400px;
+  min-width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 32px;
+  background-color: #faa307;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.input-name-register {
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-width: 1.5px;
+  background-color: transparent;
+  width: 100%;
+  margin-top: 20px;
+  outline: none;
+}
+.input-last-name-register {
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-width: 1.5px;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+}
+.input-username-register {
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-width: 1.5px;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+}
+.select-language {
+  background-color: transparent;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  color: #dc2f02;
+  width: 100%;
+  outline: none;
+  display: inline;
+}
+.input-password-register {
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-width: 1.5px;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+}
+.btn-register {
+  color: white;
+  background-color: #dc2f02;
+  border-radius: 19px;
+  border-style: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.txt-register {
+  font-size: 15px;
+  width: fit-content;
+}
+.circle-register-1 {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  left: -10%;
+  top: -10%;
+  background: #d00000;
+  filter: blur(200px);
+  z-index: -1;
+}
+.circle-register-2 {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: -20%;
+  background: #ffba08;
+  filter: blur(100px);
+  z-index: -1;
+}
+.circle-register-3 {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 80%;
+  top: 87%;
+  background: #bc6c25;
+  filter: blur(100px);
+  z-index: -1;
+}
+.circle-register-4 {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  left: 10%;
+  top: 89%;
+  background: #f48c06;
+  filter: blur(100px);
+  z-index: -1;
+}
+.txt-logo-register {
+  font-size: 70px;
+  color: #dc2f02;
+  margin-right: auto;
+  margin-left: auto;
+  width: fit-content;
+  margin-top: 50px;
+}
+.navbar {
+  color: white;
+  font-size: 20px;
+  background-color: #76c893;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.navbar-brand {
+  font-size: 50px;
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+.navbar-toggler {
+  background-color: #1f6a3a;
+}
+.navbar-toggler-icon {
+  color: white;
+}
+.dropdown-item {
+  background-color: #76c893;
+  color: white;
+  height: fit-content;
+}
+.dropdown-toggle {
+  background-color: #76c893;
+  color: white;
+  height: fit-content;
+  text-decoration: none;
+  margin: 10px;
+}
+.item-napredak {
+  color: white;
+  height: fit-content;
+  text-decoration: none;
+  margin: 10px;
+}
+.ul {
+  background-color: #76c893;
+}
+.name-item {
+  position: absolute;
+  right: 30px;
+}
+.circle-home-1 {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  left: -10%;
+  top: -10%;
+  background: #52b69a;
+  filter: blur(200px);
+  z-index: -1;
+}
+.circle-home-2 {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 40%;
+  bottom: -20%;
+  background: #d9ed92;
+  filter: blur(100px);
+  z-index: -1;
+}
+.circle-home-3 {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 80%;
+  bottom: 87%;
+  background: #168aad;
+  filter: blur(100px);
+  z-index: -1;
+}
+.div-levels {
+  height: fit-content;
+  width: 30%;
+  max-width: 600px;
+  min-width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.button-level {
+  margin: 10px;
+  display: inline;
+  color: white;
+  background-color: #76c893;
+  border-style: none;
+  border-radius: 22px;
+  padding: 10px;
+  width: 100px;
+}
+.button-level:hover {
+  color: #0077b6;
+}
+
+.div-vezbanje-roda {
+  height: fit-content;
+  text-align: center;
+  width: 30%;
+  max-width: 600px;
+  min-width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.btn-rod {
+  margin: 10px;
+  display: inline;
+  color: white;
+  background-color: #76c893;
+  border-style: none;
+  border-radius: 22px;
+  padding: 10px;
+  width: 100px;
+}
+.btn-rod:hover {
+  color: #0077b6;
+}
+.txt-vezbanje-roda {
+  margin-bottom: 20vh;
+  font-size: 4vh;
+}
+.rec-vezbanje-roda {
+  margin-bottom: 15vh;
+}
+.progress {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+.div-exit-vezbanje-rod {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.button-exit-vezbanje-rod {
+  background: transparent;
+  border-style: none;
+  font-size: 3vh;
+  color: #0077b6;
+}
+.txt-tacan-rod {
+  color: red;
+  display: none;
+}
+.div-welcome {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: fit-content;
+}
+.txt-welcome {
+  font-size: 7vh;
+  color: #0077b6;
+}
+.div-progress {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  border-radius: 17px;
+  background-color: #90e0ef;
+  padding: 10px;
+  width: fit-content;
+  color: white;
+  z-index: -1;
+}
+.div-single-progress {
+  border-radius: 17px;
+  background-color: #52b69a;
+  margin: 2vw;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.txt-naziv-vezbanja,
+.txt-nivo-vezbanja,
+.txt-odnos-odgovora,
+.txt-datum-vezbanja {
+  font-size: 2vh;
+  width: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.div-naziv-vezbanja,
+.div-nivo-vezbanja,
+.div-progress-vezbanje,
+.div-odnos-odgovora,
+.div-datum-vezbanja {
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: fit-content;
+}
+.div-progress-vezbanje {
+  margin-right: 0px;
+}
+.div-vezbanje-prevoda {
+  height: fit-content;
+  text-align: center;
+  width: 30%;
+  max-width: 600px;
+  min-width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.btn-prevod {
+  margin: 10px;
+  display: inline;
+  color: white;
+  background-color: #76c893;
+  border-style: none;
+  border-radius: 22px;
+  padding: 10px;
+  padding: 10px;
+}
+.btn-prevod:hover {
+  color: #0077b6;
+}
+.txt-vezbanje-prevoda {
+  margin-bottom: 20vh;
+  font-size: 4vh;
+}
+.rec-vezbanje-prevoda {
+  margin-bottom: 15vh;
+}
+.div-exit-vezbanje-prevod {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.button-exit-vezbanje-prevod {
+  background: transparent;
+  border-style: none;
+  font-size: 3vh;
+  color: #0077b6;
+}
+.txt-tacan-prevod {
+  color: red;
+  display: none;
+}
+.div-moj-nalog {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  width: 40%;
+  background-color: #76c893;
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+}
+.txt-moj-nalog {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: white;
+}
+.btn-promena-lozinke {
+  background-color: transparent;
+  border-style: none;
+  font-size: 20px;
+  color: white;
+}
+.btn-brisanje-naloga {
+  background-color: transparent;
+  border-style: none;
+  font-size: 20px;
+  color: white;
+}
+.input-password-old,
+.input-password-new,
+.input-password-new-repeat {
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-width: 1.5px;
+  background-color: transparent;
+  width: 50%;
+  outline: none;
+}
+.btn-promena-lozinke-action {
+  border-radius: 17px;
+  background-color: #168aad;
+  border-style: none;
+  padding: 10px;
+  color: white;
+}
+.div-promena-lozinke {
+  display: none;
+}
+.txt-uspeh-promene {
+  display: none;
+}
+.img-logo-blue {
+  width: 12vh;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.img-logo-orange {
+  width: 20vh;
+  position: absolute;
+  left: 50%;
+  top: 11%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media all and (max-width: 768px) {
+  .img-logo-orange {
+    top: 6%;
+  }
+}
+.txt-progres-nazivi {
+  color: #0077b6;
+}
