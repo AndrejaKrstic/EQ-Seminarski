@@ -141,8 +141,14 @@ function MojNalog() {
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               Da li želite da obrišete vaš nalog?
             </Typography>
-            <Button onClick={handleAccountDelete}>Obriši</Button>
-            <Button onClick={handleClose}>Odustani</Button>
+            <div style={{ textAlign: "center" }}>
+              <Button onClick={handleAccountDelete} style={{ color: "red" }}>
+                Obriši
+              </Button>
+              <Button onClick={handleClose} style={{ color: "white" }}>
+                Odustani
+              </Button>
+            </div>
           </Box>
         </Modal>
       </div>

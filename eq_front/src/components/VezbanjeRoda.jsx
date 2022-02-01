@@ -179,7 +179,7 @@ function VezbanjeRoda({ level }) {
       </div>
       <div className="div-exit-vezbanje-rod">
         <button onClick={handleExit} className="button-exit-vezbanje-rod">
-          IZLAZ
+          sačuvaj i izađi
         </button>
       </div>
       <ToastContainer />

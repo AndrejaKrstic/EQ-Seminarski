@@ -11,22 +11,32 @@ import MainMenu from "./components/MainMenu";
 import Progress from "./components/Progress";
 import VezbanjePrevoda from "./components/VezbanjePrevoda";
 import MojNalog from "./components/MojNalog";
+import AdminMenu from "./components/AdminMenu";
 
 function App() {
   const [level, setLevel] = useState();
   function selektujLevel(level) {
     setLevel(level);
   }
+  const [isAdmin, setIsAdmin] = useState();
+  function selektujAdmina(isAdmin) {
+    setIsAdmin(isAdmin);
+    console.log(isAdmin);
+  }
   return (
     <BrowserRouter className="App">
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={<Login selektujAdmina={selektujAdmina} />}
+        />
         <Route path="/register" element={<Register />} />
         <Route
           path="/"
           element={
             <>
-              <MenuBar /> <MainMenu />
+              <MenuBar isAdmin={isAdmin} />
+              {isAdmin == 0 ? <MainMenu /> : <AdminMenu />}
             </>
           }
         />
@@ -34,8 +44,12 @@ function App() {
           path="/izbor-nivoa/1"
           element={
             <>
-              <MenuBar vezbanjeID={1}/>
-              <LevelSelect selektujLevel={selektujLevel} vezbanjeID={1} />
+              <MenuBar isAdmin={isAdmin} vezbanjeID={1} />
+              <LevelSelect
+                selektujLevel={selektujLevel}
+                vezbanjeID={1}
+                key={1}
+              />
             </>
           }
         />
@@ -43,8 +57,12 @@ function App() {
           path="/izbor-nivoa/2"
           element={
             <>
-              <MenuBar vezbanjeID={2}/>
-              <LevelSelect selektujLevel={selektujLevel} vezbanjeID={2} />
+              <MenuBar isAdmin={isAdmin} vezbanjeID={2} />
+              <LevelSelect
+                selektujLevel={selektujLevel}
+                vezbanjeID={2}
+                key={2}
+              />
             </>
           }
         />
@@ -52,7 +70,7 @@ function App() {
           path="/vezbanje-roda"
           element={
             <>
-              <MenuBar />
+              <MenuBar isAdmin={isAdmin} />
               <VezbanjeRoda level={level} />
             </>
           }
@@ -61,7 +79,7 @@ function App() {
           path="/moj-napredak"
           element={
             <>
-              <MenuBar />
+              <MenuBar isAdmin={isAdmin} />
               <Progress />
             </>
           }
@@ -70,7 +88,7 @@ function App() {
           path="/vezbanje-prevoda"
           element={
             <>
-              <MenuBar />
+              <MenuBar isAdmin={isAdmin} />
               <VezbanjePrevoda level={level} />
             </>
           }
@@ -79,7 +97,7 @@ function App() {
           path="/moj-nalog"
           element={
             <>
-              <MenuBar />
+              <MenuBar isAdmin={isAdmin} />
               <MojNalog />
             </>
           }

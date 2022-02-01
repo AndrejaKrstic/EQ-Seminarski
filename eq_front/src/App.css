@@ -317,18 +317,19 @@ input:-webkit-autofill:active {
 }
 .div-levels {
   height: fit-content;
-  width: 30%;
-  max-width: 600px;
-  min-width: 300px;
+  max-width: 360px;
+  width: fit-content;
+  /* min-width: 300px; */
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  padding: 20px;
-  padding-bottom: 10px;
+  padding-left: auto;
+  padding-right: auto;
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
 }
 .button-level {
   margin: 10px;
@@ -374,14 +375,16 @@ input:-webkit-autofill:active {
 .txt-vezbanje-roda {
   margin-bottom: 20vh;
   font-size: 4vh;
+  z-index: -1000;
 }
 .rec-vezbanje-roda {
   margin-bottom: 15vh;
+  font-size: 30px;
 }
 .progress {
   position: absolute;
   left: 50%;
-  top: 80%;
+  top: 85%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 50%;
@@ -389,15 +392,17 @@ input:-webkit-autofill:active {
 .div-exit-vezbanje-rod {
   position: absolute;
   left: 50%;
-  top: 85%;
+  top: 90%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .button-exit-vezbanje-rod {
-  background: transparent;
+  background: #0077b6;
+  border-radius: 10px;
   border-style: none;
-  font-size: 3vh;
-  color: #0077b6;
+  font-size: 2.5vh;
+  color: white;
+  padding: 5px;
 }
 .txt-tacan-rod {
   color: red;
@@ -414,6 +419,7 @@ input:-webkit-autofill:active {
 .txt-welcome {
   font-size: 7vh;
   color: #0077b6;
+  z-index: -1;
 }
 .div-progress {
   position: relative;
@@ -457,20 +463,20 @@ input:-webkit-autofill:active {
   margin-right: 20px;
   height: fit-content;
 }
+
 .div-progress-vezbanje {
   margin-right: 0px;
 }
 .div-vezbanje-prevoda {
   height: fit-content;
   text-align: center;
-  width: 30%;
+  width: 100%;
   max-width: 600px;
   min-width: 300px;
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7vh;
   padding: 20px;
   padding-bottom: 10px;
 }
@@ -490,9 +496,11 @@ input:-webkit-autofill:active {
 .txt-vezbanje-prevoda {
   margin-bottom: 20vh;
   font-size: 4vh;
+  z-index: -1;
 }
 .rec-vezbanje-prevoda {
   margin-bottom: 15vh;
+  font-size: 30px;
 }
 .div-exit-vezbanje-prevod {
   position: absolute;
@@ -502,10 +510,12 @@ input:-webkit-autofill:active {
   transform: translate(-50%, -50%);
 }
 .button-exit-vezbanje-prevod {
-  background: transparent;
+  background: #0077b6;
+  border-radius: 10px;
   border-style: none;
-  font-size: 3vh;
-  color: #0077b6;
+  font-size: 2.5vh;
+  color: white;
+  padding: 5px;
 }
 .txt-tacan-prevod {
   color: red;
@@ -583,17 +593,28 @@ input:-webkit-autofill:active {
   .img-logo-orange {
     top: 6%;
   }
+  .div-progress {
+    margin-top: 30%;
+  }
+}
+@media all and (max-width: 1200px) {
+  .name-item {
+    right: 70px;
+  }
 }
 .txt-progres-nazivi {
   color: #0077b6;
 }
-
-.txt-naziv-level{
+.txt-naziv-level {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20vh;
   color: #0077b6;
-
-
+}
+.div-dropbox {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15%;
+  width: fit-content;
 }

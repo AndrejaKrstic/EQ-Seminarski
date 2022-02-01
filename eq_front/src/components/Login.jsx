@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import logo from "./logo-blue.png";
 
-function Login() {
+function Login({ selektujAdmina }) {
   document.body.style.overflowY = "hidden";
   const [userData, setUserData] = useState({
     korisnicko_ime: "",
@@ -26,8 +26,16 @@ function Login() {
         window.sessionStorage.setItem("auth_token", res.data.access_token);
         window.sessionStorage.setItem("imePrezime", res.data.imePrezime);
         window.sessionStorage.setItem("id", res.data.id);
+        if (res.data.id == 1) {
+          selektujAdmina(1);
+        } else {
+          selektujAdmina(0);
+        }
         if (res.data.success == false) {
           document.getElementById("txt-login-error").style.display = "block";
+          setTimeout(function () {
+            document.getElementById("txt-login-error").style.display = "none";
+          }, 2000);
         } else {
           navigate("/");
         }

@@ -266,7 +266,7 @@ function VezbanjePrevoda({ level }) {
       </div>
       <div className="div-exit-vezbanje-prevod">
         <button onClick={handleExit} className="button-exit-vezbanje-prevod">
-          IZLAZ
+          sačuvaj i izađi
         </button>
       </div>
       <ToastContainer />

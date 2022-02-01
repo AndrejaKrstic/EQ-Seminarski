@@ -4,8 +4,10 @@ namespace Database\Seeders;
 
 use App\Models\Course;
 use App\Models\Language;
+use App\Models\User;
 use App\Models\Word;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,6 +18,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $user = User::create([
+            'korisnicko_ime'=>'admin',
+            'ime'=>'admin',
+            'prezime'=>'admin',
+            'password'=>Hash::make("admin"),
+        ]);
+
         $language = Language::create([
             'naziv'=>'nemacki',
         ]);
