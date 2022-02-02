@@ -74,7 +74,17 @@ function Register() {
             document.getElementById("input-password-register").style.color =
               "black";
           }, 2000);
-        } else {
+        } else if(res.data.korisnicko_ime ==
+          "The korisnicko ime must be at least 5 characters."){
+            document.getElementById("input-korisnicko_ime").value =
+            "Najmanje 5 karaktera";
+          document.getElementById("input-korisnicko_ime").style.color = "red";
+          setTimeout(function () {
+            document.getElementById("input-korisnicko_ime").value = "";
+            document.getElementById("input-korisnicko_ime").style.color =
+              "black";
+          }, 2000);
+        }else {
           handleOpen();
           setTimeout(function () {
             navigate("/login");
