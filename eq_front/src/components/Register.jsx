@@ -32,7 +32,9 @@ function Register() {
     naziv_jezika: "",
     nivo: "",
     password: "",
+    isProf: 0,
   });
+  console.log(userData);
   let navigate = useNavigate();
   function handleInput(e) {
     let newUserData = userData;

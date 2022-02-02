@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('ime');
             $table->string('prezime');
             $table->string('password');
+            $table->integer('isProf');
             $table->rememberToken();
             $table->timestamps();
         });

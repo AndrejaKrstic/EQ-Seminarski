@@ -28,6 +28,8 @@ function Login({ selektujAdmina }) {
         window.sessionStorage.setItem("id", res.data.id);
         if (res.data.id == 1) {
           selektujAdmina(1);
+        } else if (res.data.isProf == 1) {
+          selektujAdmina(2);
         } else {
           selektujAdmina(0);
         }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\HomeworkController;
 use App\Http\Controllers\PractiseController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WordController;
@@ -29,6 +30,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/vezbanje', [PractiseController::class, 'store']);
     Route::post('/users/password', [UserController::class, 'passwordChange']);
     Route::post('/levels', [PractiseController::class, 'getlevels']);
+    Route::post('/domaci', [HomeworkController::class, 'addDomaci']);
+    Route::get('/domaci', [HomeworkController::class, 'getAllDomaci']);
+    Route::delete('/domaci/{id}', [HomeworkController::class, 'destroy']);
 
 
 });

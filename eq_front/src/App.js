@@ -12,6 +12,7 @@ import Progress from "./components/Progress";
 import VezbanjePrevoda from "./components/VezbanjePrevoda";
 import MojNalog from "./components/MojNalog";
 import AdminMenu from "./components/AdminMenu";
+import ProfMenu from "./components/ProfMenu";
 
 function App() {
   const [level, setLevel] = useState();
@@ -36,7 +37,13 @@ function App() {
           element={
             <>
               <MenuBar isAdmin={isAdmin} />
-              {isAdmin == 0 ? <MainMenu /> : <AdminMenu />}
+              {isAdmin == 0 ? (
+                <MainMenu isAdmin={isAdmin} />
+              ) : isAdmin == 1 ? (
+                <AdminMenu />
+              ) : (
+                <ProfMenu isAdmin={isAdmin} />
+              )}
             </>
           }
         />

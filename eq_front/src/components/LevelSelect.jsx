@@ -36,8 +36,9 @@ function LevelSelect({ selektujLevel, vezbanjeID }) {
   useEffect(() => {
     if (levelsDone != null) {
       for (let x = 0; x < levelsDone.length; x++) {
-        document.getElementById("btn-level-" + levelsDone[x]).style.color =
-          "#0077b6";
+        document.getElementById(
+          "btn-level-" + levelsDone[x]
+        ).style.backgroundColor = "#0077b6";
       }
     }
     //setLevelsDone(null);

@@ -2,11 +2,12 @@ import React from "react";
 import axios from "axios";
 //import { Outlet } from "react-router-dom";
 import { useNavigate, Navigate, Link } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect, useState } from "react/cjs/react.development";
 
 function MenuBar({ vezbanjeID, isAdmin }) {
   let navigate = useNavigate();
   function handleLogout(e) {
+    clearInterval(intervalId);
     var config = {
       method: "post",
       url: "logout",
@@ -26,9 +27,26 @@ function MenuBar({ vezbanjeID, isAdmin }) {
   }
   useEffect(() => {
     if (window.sessionStorage.getItem("auth_token") == "null") {
+      clearInterval(intervalId);
+
       navigate("/login");
     }
   });
+
+  var intervalId = window.setInterval(function () {
+    axios
+      .get("http://worldtimeapi.org/api/timezone/Europe/Belgrade")
+      .then((res) => {
+        var mySubString = res.data.datetime.substring(
+          res.data.datetime.indexOf("T") + 1,
+          res.data.datetime.lastIndexOf(".")
+        );
+        document.getElementsByClassName("txt-time-api")[0].innerHTML =
+          mySubString;
+      })
+      .catch((e) => console.log(e));
+  }, 1000);
+
   return (
     <>
       {window.sessionStorage.getItem("auth_token") == null ? (
@@ -88,7 +106,7 @@ function MenuBar({ vezbanjeID, isAdmin }) {
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
                         >
-                          Vezbanje
+                          Vežbanje
                         </a>
 
                         <ul
@@ -126,6 +144,12 @@ function MenuBar({ vezbanjeID, isAdmin }) {
                           Moj napredak
                         </Link>
                       </li>
+                      <li className="nav-item">
+                        <div className="div-time-api">
+                          <p className="txt-time-api"></p>
+                        </div>
+                      </li>
+
                       <li className="nav-item dropdown name-item">
                         <a
                           className="dropdown-toggle name-link"
@@ -201,6 +225,12 @@ function MenuBar({ vezbanjeID, isAdmin }) {
                     id="navbarWithDropdown"
                   >
                     <ul className="navbar-nav">
+                      <li className="nav-item">
+                        <div className="div-time-api">
+                          <p className="txt-time-api"></p>
+                        </div>
+                      </li>
+
                       <li
                         className="nav-item dropdown name-item"
                         style={{ top: 1.5 + "vw" }}

@@ -163,7 +163,6 @@ input:-webkit-autofill:active {
   border-top-style: none;
   border-left-style: none;
   border-right-style: none;
-  color: #dc2f02;
   width: 100%;
   outline: none;
   display: inline;
@@ -505,7 +504,7 @@ input:-webkit-autofill:active {
 .div-exit-vezbanje-prevod {
   position: absolute;
   left: 50%;
-  top: 85%;
+  top: 90%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -617,4 +616,119 @@ input:-webkit-autofill:active {
   margin-left: auto;
   margin-top: 15%;
   width: fit-content;
+}
+.div-admin-menu {
+  width: 80%;
+  min-height: 90vh;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding-bottom: 30%;
+  padding-top: 10%;
+}
+.div-admin-rad-sa-prof {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom-style: solid;
+  border-width: 1px;
+}
+.div-admin-dodaj-prof {
+  display: none;
+  width: 50%;
+}
+.btn-admin-show-profAdd {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+}
+.btn-admin-addProf {
+  color: white;
+  background-color: #52b69a;
+  border-radius: 19px;
+  border-style: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.div-prof {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  background-color: white;
+  min-height: 90vh;
+  padding: 5%;
+}
+.div-prof-add-homework {
+  width: 90%;
+  margin-top: 5%;
+  display: none;
+}
+.btn-prof-show-addHomework {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+}
+.btn-prof-delete-homework {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+}
+.btn-prof-add-homework {
+  color: white;
+  background-color: #52b69a;
+  border-radius: 19px;
+  border-style: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.input-homework-text {
+  width: 100%;
+  height: 70vh;
+}
+.btn-show-homework-item {
+  margin: 10px;
+  padding: 5px;
+  min-width: 130px;
+  width: fit-content;
+  background-color: #0077b6;
+  border-radius: 10px;
+  border-style: none;
+  color: white;
+}
+.div-homework-item {
+  width: fit-content;
+}
+.div-student-menu {
+  width: 60%;
+  min-height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25vh;
+  background-color: #90e0ef;
+  border-radius: 20px;
+  padding: 20px;
+}
+.div-student-homework {
+  border-bottom-style: solid;
+  border-width: 1px;
+}
+.div-student-homework {
+  margin: 20px;
+}
+.div-time-api {
+  position: absolute;
+  right: 25vh;
 }

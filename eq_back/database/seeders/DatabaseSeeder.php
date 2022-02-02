@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             'korisnicko_ime'=>'admin',
             'ime'=>'admin',
             'prezime'=>'admin',
+            'isProf'=>2,
             'password'=>Hash::make("admin"),
         ]);
 

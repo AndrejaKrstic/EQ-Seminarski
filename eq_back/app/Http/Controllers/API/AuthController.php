@@ -23,6 +23,7 @@ class AuthController extends Controller
             'password' => 'required|string|min:8',
             'naziv_jezika' => 'required|string',
             'nivo' => 'required|string',
+            'isProf'=>'required',
         ]);
 
 
@@ -33,6 +34,7 @@ class AuthController extends Controller
             'ime' => $request->ime,
             'prezime' => $request->prezime,
             'korisnicko_ime' => $request->korisnicko_ime,
+            'isProf' => $request->isProf,
             'password' => Hash::make($request->password),
         ]);
 
@@ -71,7 +73,7 @@ class AuthController extends Controller
         
         $imePrezime = $user->ime . ' ' . $user->prezime;
         return response()
-            ->json(['success'=>true, 'access_token' => $token, 'token_type' => 'Bearer', 'imePrezime'=>$imePrezime, 'id'=>$user->id]);
+            ->json(['success'=>true, 'access_token' => $token, 'token_type' => 'Bearer', 'imePrezime'=>$imePrezime, 'id'=>$user->id, 'isProf'=>$user->isProf]);
     }
 
 

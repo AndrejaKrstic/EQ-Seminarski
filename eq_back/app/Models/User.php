@@ -22,6 +22,7 @@ class User extends Authenticatable
         'prezime',
         'korisnicko_ime',
         'password',
+        'isProf',
     ];
     //public $timestamps = false;
 
