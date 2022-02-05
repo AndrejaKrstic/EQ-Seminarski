@@ -22,7 +22,25 @@ function HomeworksStudent({ isAdmin }) {
   }, [HomeworkList]);
   console.log(HomeworkList);
   return (
-
+    <>
+      {HomeworkList == null || HomeworkList.length === 0 ? (
+        <>
+          <div>
+            <h3>Nema domaćih</h3>
+          </div>
+        </>
+      ) : (
+        HomeworkList.map((homework) => (
+          <>
+            <HomeworkItem
+              homework={homework}
+              key={homework.id_domaceg}
+              isAdmin={isAdmin}
+            />
+          </>
+        ))
+      )}
+    </>
   );
 }
 
