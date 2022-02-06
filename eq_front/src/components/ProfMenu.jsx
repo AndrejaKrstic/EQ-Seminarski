@@ -115,7 +115,74 @@ function ProfMenu({ isAdmin }) {
           Dodaj novi domaći
         </button>
         <br />
-
+        <div className="div-prof-add-homework">
+          <form className="form-register" onSubmit={handleHomeWorkAdd}>
+            <input
+              className="input-name-homework"
+              type="name"
+              required
+              name="naziv_domaceg"
+              onInput={handleInput}
+              placeholder="Naziv domaćeg"
+              style={{ marginBottom: 20 + "px" }}
+            />
+            <textarea
+              className="input-homework-text"
+              type="text"
+              required
+              name="domaci_zadatak"
+              onInput={handleInput}
+              placeholder="Tekst zadatka"
+            />
+            <p
+              className="txt-rok-izrade"
+              style={{ marginBottom: 0, marginTop: 20 + "px" }}
+            >
+              Rok izrade
+            </p>
+            <input
+              className="input-due-date"
+              type="date"
+              required
+              name="rok_izrade"
+              onInput={handleInput}
+            />
+            <div
+              className="row"
+              style={{ width: 50 + "%", marginTop: 20 + "px" }}
+            >
+              <div className="col-md-6">
+                <select
+                  name="naziv_jezika"
+                  id="naziv_jezika"
+                  className="select-language"
+                  required
+                  onChange={handleInput}
+                >
+                  <option value="nemacki" disabled selected hidden></option>
+                  <option value="Nemački">Nemački</option>
+                </select>
+                <p className="txt-register">Jezik</p>
+              </div>
+              <div className="col-md-6">
+                <select
+                  name="nivo"
+                  id="nivo"
+                  className="select-language"
+                  required
+                  onChange={handleInput}
+                >
+                  <option value="A1.1" disabled selected hidden></option>
+                  <option value="A1.1">A1.1</option>
+                </select>
+                <p className="txt-register">Nivo</p>
+              </div>
+            </div>
+            <button className="btn-prof-add-homework" type="submit">
+              Postavi zadatak
+            </button>
+          </form>
+        </div>
         <button
           className="btn-prof-delete-homework"
           onClick={showDeleteHomework}
